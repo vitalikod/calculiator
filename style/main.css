@@ -1,0 +1,63 @@
+body {
+  background-color: #9BFC9B;
+}
+
+.contener {
+  height: 750PX;
+  width: 600px;
+  background-color: #78F7F7;
+  margin: 0 auto;
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contener .display {
+  height: 140px;
+  width: 600px;
+}
+
+.contener .display .input {
+  height: 140px;
+  width: 592px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.contener .line {
+  height: 140px;
+  width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contener .line .button {
+  height: 130px;
+  width: 130px;
+  background-color: bisque;
+  border-radius: 48px;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 48px;
+  font-weight: 700;
+  color: black;
+}
+/*# sourceMappingURL=main.css.map */
