@@ -10,16 +10,19 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    border-radius: 24px;
 
     .display {
         height: 140px;
         width: 600px;
+        border-radius: 24px;
 
         .input {
             height: 140px;
             width: 592px;
             font-size: 48px;
             font-weight: 700;
+            border-radius: 24px;
         }
     }
 
@@ -42,6 +45,13 @@ body {
             font-size: 48px;
             font-weight: 700;
             color: black;
+            cursor: pointer;
+            
+            &:hover {
+                background-color: #323330;
+                color: white;
+                transition: 0.5s ease-in-out;
+            }
         }
     }
 }
