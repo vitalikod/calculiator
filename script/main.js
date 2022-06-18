@@ -1,40 +1,17 @@
-let a = '';
-let b = '';
-let sign = '';
-let finish = false;
-
-const digit = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9',];
-const action = ['-', '+', '/', '*',];
-
-const out = document.querySelector('.screen');
-
-function clearAll () {
-    a = '';
-    b = '';
-    sign = '';
-    finish = false;
-    out.textContent = 0;
+function insert(num) {
+    document.forms.textview.value =
+    document.forms.textview.value +num; 
 }
-
-document.querySelector('.ac').onclick = clearAll;
-
-document.querySelector('.buttons').onclick = (event) => {
-    if(!event.target.classList('button')) return;
-    if(event.target.classList('ac')) return;
-
-    out.textContent = '';
-
-    const key = event.target.textContent;
-
-    if (digit.includes(key)) {
-        a += key;
-        console.log(a, b , sign);
-        out.textContent = a;
-    }
-    if (action.includes(key)) {
-        sign = key;
-        out.textContent = sign;
-        console.log(a, b , sign);
-        return;
+function clean() {
+    document.forms.textview.value = '';
+}
+function back() {
+    var exp =  document.forms.textview.value;
+    document.forms.textview.value = exp.substring(0, exp.length-1);
+}
+function equal() {
+    var exp =  document.forms.textview.value;
+    if(exp) {
+        document.forms.textview.value = eval(exp);
     }
 }

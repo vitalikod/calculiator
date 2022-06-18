@@ -1,60 +1,62 @@
 body {
-    background-color: #9BFC9B;
+    background-color: #b5fd8d;
+    user-select: none;
 }
-.contener {
-    height: 750PX;
-    width: 600px;
-    background-color: #78F7F7;
-    margin: 0 auto;
-    margin-top: 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border-radius: 24px;
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 4px;
+    background-color: #212121;
+    padding: 4px;
+    border-radius: 5px;
+    max-width: 360px;
+    font-family: "tahoma";
 
-    .display {
-        height: 140px;
-        width: 600px;
-        border-radius: 24px;
+    .item {
+        background-color: #b3e5fc;
+        color: #000;
+        padding: 20px;
         display: flex;
-        justify-content: end;
+        justify-content: center;
         align-items: center;
-
-        .screen {
-            height: 140px;
-            font-size: 96px;
-            line-height: calc(140 / 96 * 100%);
-            font-weight: 700;
-            border-radius: 24px;
-        }
+        font-size: 22px;
+        cursor: pointer;
+        font-weight: bold;
     }
 
-    .line {
-        height: 140px;
-        width: 600px;
-        // background-color: aquamarine;
-        display: flex;
-        justify-content: space-around;
+    .input {
+        grid-column: 1/-1;
+        padding: 0px;
+        height: 100px;
+    }
 
-        .button {
-            height: 130px;
-            width: 130px;
-            background-color: bisque;
-            border-radius: 48px;
-            border: 1px solid black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 48px;
-            font-weight: 700;
-            color: black;
-            cursor: pointer;
-            
-            &:hover {
-                background-color: #323330;
-                color: white;
-                transition: 0.5s ease-in-out;
-            }
+    .clean {
+        grid-column: 1/3;
+        background-color: #0288d1;
+    }
+
+    .back {
+        grid-column: 3/-1;
+    }
+    .equal {
+        grid-column: 4;
+        grid-row: 6/8;
+        background-color: #bdbdbd;
+    }
+    .zero {
+        grid-column: 1/3;
+    }
+
+    .forms {
+        max-width: 100%;
+
+        .inputs {
+            width: 100%;
+            height: 60px;
+            border: none;
+            font-size: 30px;
+            outline: none;
+            text-align: right;
         }
     }
 }
